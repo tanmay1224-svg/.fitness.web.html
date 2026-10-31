@@ -1,0 +1,466 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diya's Beauty Parlour</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff8fb;
+    color: #222;
+}
+
+header {
+    background: #fff;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px #0001;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #e84b91;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e84b91;
+}
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background:
+    linear-gradient(90deg, #fff0f6 45%, #fff5fa99),
+    url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400')
+    center/cover;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #e84b91;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #e84b91;
+    color: white;
+    padding: 13px 27px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: #c52d72;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.section-title span {
+    color: #e84b91;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #0001;
+    text-align: center;
+    padding-bottom: 25px;
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    margin: 18px 0 10px;
+    color: #e84b91;
+}
+
+.service-card p {
+    padding: 0 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.about {
+    background: #ffeaf3;
+    text-align: center;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.9;
+    color: #555;
+}
+
+.booking {
+    background: white;
+}
+
+.booking-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background: #fff8fb;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px #0001;
+}
+
+.booking-box input,
+.booking-box select,
+.booking-box textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #edc6d8;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+}
+
+.booking-box input:focus,
+.booking-box select:focus,
+.booking-box textarea:focus {
+    border-color: #e84b91;
+}
+
+.booking-box button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.contact {
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+.contact p {
+    margin: 15px;
+    color: #eee;
+}
+
+.contact a {
+    color: #ff8cba;
+    text-decoration: none;
+}
+
+footer {
+    background: #111;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+@media(max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 480px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .booking-box {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Diya's Beauty Parlour ♡</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#booking">Appointment</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <h1>Beauty Begins <span>With You.</span></h1>
+
+        <p>
+            Discover your beauty with our professional beauty
+            services. Experience elegance, confidence and
+            self-care at Diya's Beauty Parlour.
+        </p>
+
+        <a href="#booking" class="btn">Book Appointment ♡</a>
+    </div>
+</div>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2 class="section-title">Our <span>Services</span></h2>
+
+    <p class="subtitle">
+        Make yourself feel beautiful and confident.
+    </p>
+
+    <div class="services">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600">
+            <h3>Hair Styling</h3>
+            <p>Beautiful haircuts, styling and hair care services.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600">
+            <h3>Makeup</h3>
+            <p>Professional makeup for your special occasions.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600">
+            <h3>Facial & Skincare</h3>
+            <p>Relaxing facial and skincare treatments.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600">
+            <h3>Bridal Makeup</h3>
+            <p>Special bridal beauty services for your big day.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">About <span>Us</span></h2>
+
+    <p>
+        Welcome to Diya's Beauty Parlour!
+        Our goal is to make every customer feel confident,
+        relaxed and beautiful. We believe that beauty is
+        about expressing yourself. Visit us and enjoy
+        a wonderful beauty experience.
+    </p>
+
+</section>
+
+<!-- APPOINTMENT -->
+
+<section class="booking" id="booking">
+
+    <h2 class="section-title">Book An <span>Appointment</span></h2>
+
+    <p class="subtitle">
+        Fill out the form and book your beauty session.
+    </p>
+
+    <div class="booking-box">
+
+        <form id="appointmentForm">
+
+            <input type="text" id="name"
+            placeholder="Your Full Name" required>
+
+            <input type="tel" id="phone"
+            placeholder="Your Phone Number"
+            pattern="[0-9]{10}" maxlength="10" required>
+
+            <select id="service" required>
+                <option value="">Select a Service</option>
+                <option>Hair Styling</option>
+                <option>Makeup</option>
+                <option>Facial & Skincare</option>
+                <option>Bridal Makeup</option>
+                <option>Other</option>
+            </select>
+
+            <input type="date" id="date" required>
+
+            <select id="time" required>
+                <option value="">Select Time</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>01:00 PM</option>
+                <option>02:00 PM</option>
+                <option>03:00 PM</option>
+                <option>04:00 PM</option>
+                <option>05:00 PM</option>
+                <option>06:00 PM</option>
+            </select>
+
+            <textarea id="message"
+            placeholder="Any special request?"></textarea>
+
+            <button type="submit" class="btn">
+                Book Through WhatsApp ♡
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Contact <span>Us</span>
+    </h2>
+
+    <p>Have questions? Get in touch with us.</p>
+
+    <p>📞 Phone:
+        <a href="tel:8767204702">8767204702</a>
+    </p>
+
+    <p>✉ Email:
+        <a href="mailto:rekhanimje15@gmail.com">
+        rekhanimje15@gmail.com</a>
+    </p>
+
+    <p>💗 Diya's Beauty Parlour</p>
+
+</section>
+
+<footer>
+    © 2026 Diya's Beauty Parlour. All Rights Reserved.
+</footer>
+
+<script>
+
+// Set minimum appointment date to today
+const dateInput = document.getElementById("date");
+dateInput.min = new Date().toLocaleDateString("en-CA");
+
+document.getElementById("appointmentForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const service = document.getElementById("service").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappNumber = "918767204702";
+
+    const text =
+    "Hello Diya's Beauty Parlour! I want to book an appointment.%0A%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Phone: " + encodeURIComponent(phone) + "%0A" +
+    "Service: " + encodeURIComponent(service) + "%0A" +
+    "Date: " + encodeURIComponent(date) + "%0A" +
+    "Time: " + encodeURIComponent(time) + "%0A" +
+    "Message: " + encodeURIComponent(message);
+
+    const url = "https://wa.me/" + whatsappNumber + "?text=" + text;
+
+    window.open(url, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
